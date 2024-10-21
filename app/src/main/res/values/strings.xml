@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyTableTimerForJava</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_课程表主页">课程表主页</string>
+    <string name="background_image_desc">back_image_home_1</string>
+</resources>
