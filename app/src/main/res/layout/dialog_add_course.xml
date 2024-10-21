@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/edit_course_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="课程名称"
+        android:minHeight="48dp"
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/edit_course_classroom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="教室"
+        android:minHeight="48dp"
+        android:padding="12dp" />
+
+    <Button
+        android:id="@+id/btn_select_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择时间" />
+
+    <TextView
+        android:id="@+id/selected_time_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请设置时间 默认2:00 - 4:00"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/black" />
+
+</LinearLayout>
