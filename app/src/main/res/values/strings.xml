@@ -2,7 +2,15 @@
     <string name="app_name">MyTableTimerForJava</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_更多功能">更多功能</string>
     <string name="title_课程表主页">课程表主页</string>
     <string name="background_image_desc">back_image_home_1</string>
+    <string name="course_name">课程名称</string>
+    <string name="set_time">请设置时间 默认2:00 - 4:00</string>
+    <string name="choose_time">选择时间</string>
+    <string name="ClassRoom">教室</string>
+    <string name="add_course">添加课程</string>
+    <string name="skip">跳过</string>
+    <string name="title_关于">关于</string>
+    <string name="广告">广告位出租！</string>
 </resources>
