@@ -10,7 +10,7 @@ public class MoreFuncViewModel extends ViewModel {
 
     public MoreFuncViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is aboutInfo fragment");
+        mText.setValue("更多功能待添加!");
     }
 
     public LiveData<String> getText() {

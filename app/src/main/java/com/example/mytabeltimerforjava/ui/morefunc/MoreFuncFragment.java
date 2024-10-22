@@ -10,22 +10,23 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.mytabeltimerforjava.databinding.FragmentNotificationsBinding;
+import com.example.mytabeltimerforjava.databinding.FragmentMoreFuncBinding;
 
 public class MoreFuncFragment extends Fragment {
 
-    private FragmentNotificationsBinding binding;
+    private FragmentMoreFuncBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         MoreFuncViewModel notificationsViewModel =
                 new ViewModelProvider(this).get(MoreFuncViewModel.class);
 
-        binding = FragmentNotificationsBinding.inflate(inflater, container, false);
+        binding = FragmentMoreFuncBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textNotifications;
         notificationsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        textView.setText("界面待测试！");
         return root;
     }
 
