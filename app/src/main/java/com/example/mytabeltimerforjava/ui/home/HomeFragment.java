@@ -40,6 +40,7 @@ public class HomeFragment extends Fragment {
     private HomeViewModel homeViewModel;
     private DatabaseHelper dbHelper;
     private List<Course> courseList;
+    private TextView selected_time;
 
     @SuppressWarnings("unchecked")
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -229,12 +230,16 @@ public class HomeFragment extends Fragment {
         EditText inputName = dialogView.findViewById(R.id.edit_course_name);
         EditText inputClassroom = dialogView.findViewById(R.id.edit_course_classroom);
         Button btnSelectTime = dialogView.findViewById(R.id.btn_select_time);
+        TextView selectedTimeTextView = dialogView.findViewById(R.id.selected_time_text_view); // 获取 TextView 引用
 
         // 默认时间
         String[] selectedTime = {"02:00", "04:00"};
 
         // 点击按钮弹出时间选择对话框
-        btnSelectTime.setOnClickListener(v -> showTimePickerDialog(selectedTime));
+        btnSelectTime.setOnClickListener(v -> {
+            // 首先选择开始时间
+            showTimePickerDialog(selectedTime, selectedTimeTextView, true);
+        });
 
         // 创建对话框
         new MaterialAlertDialogBuilder(requireContext())
@@ -264,30 +269,40 @@ public class HomeFragment extends Fragment {
                 .show();
     }
 
+
     // 时间选择器对话框
-    private void showTimePickerDialog(String[] selectedTime) {
-        // 获取当前时间
-        Calendar calendar = Calendar.getInstance();
-        int hour = calendar.get(Calendar.HOUR_OF_DAY);
-        int minute = calendar.get(Calendar.MINUTE);
+    // 时间选择器对话框
+    private void showTimePickerDialog(String[] selectedTime, TextView selectedTimeTextView, boolean isStartTime) {
+        // 创建时间选择器
+        TimePickerDialog timePickerDialog = new TimePickerDialog(getContext(), (view, hourOfDay, minute) -> {
+            // 格式化选择的时间
+            String selectedTimeString = String.format("%02d:%02d", hourOfDay, minute);
 
-        // 创建开始时间选择器
-        TimePickerDialog startTimePicker = new TimePickerDialog(getContext(), (view, selectedHour, selectedMinute) -> {
-            String startTime = String.format("%02d:%02d", selectedHour % 12, selectedMinute);
-            selectedTime[0] = startTime;
+            if (isStartTime) {
+                selectedTime[0] = selectedTimeString; // 更新开始时间
+                selectedTimeTextView.setText("选择开始时间: " + selectedTimeString); // 更新显示的文本
+            } else {
+                selectedTime[1] = selectedTimeString; // 更新结束时间
+                selectedTimeTextView.setText("选择结束时间: " + selectedTimeString); // 更新显示的文本
+            }
 
-            // 创建结束时间选择器
-            TimePickerDialog endTimePicker = new TimePickerDialog(getContext(), (view1, endHour, endMinute) -> {
-                String endTime = String.format("%02d:%02d", endHour % 12, endMinute);
-                selectedTime[1] = endTime;
-            }, hour, minute, true);
-            endTimePicker.setTitle("选择结束时间");
-            endTimePicker.show();
+            // 如果是开始时间选择后再显示结束时间选择器
+            if (isStartTime) {
+                // 创建结束时间选择器
+                TimePickerDialog endTimePickerDialog = new TimePickerDialog(getContext(), (view1, endHour, endMinute) -> {
+                    String endTime = String.format("%02d:%02d", endHour, endMinute);
+                    selectedTime[1] = endTime; // 更新结束时间
+                    selectedTimeTextView.setText("选择的时间: " + selectedTime[0] + " - " + endTime); // 更新显示的文本
+                }, hourOfDay + 1, 0, true); // 默认结束时间为开始时间之后一小时
 
-        }, hour, minute, true);
-        startTimePicker.setTitle("选择开始时间");
-        startTimePicker.show();
+                endTimePickerDialog.show();
+            }
+        }, 2, 0, true); // 默认开始时间
+
+        timePickerDialog.setTitle(isStartTime ? "选择开始时间" : "选择结束时间");
+        timePickerDialog.show();
     }
+
 
 
     // 配置时间选择器
