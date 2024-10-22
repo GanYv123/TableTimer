@@ -7,12 +7,12 @@
         android:title="@string/title_课程表主页" />
 
     <item
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_aboutInfo"
         android:icon="@drawable/baseline_info_24"
         android:title="@string/title_关于" />
 
     <item
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_moreFunc"
         android:icon="@drawable/baseline_more_horiz_24"
         android:title="@string/title_更多功能" />
 

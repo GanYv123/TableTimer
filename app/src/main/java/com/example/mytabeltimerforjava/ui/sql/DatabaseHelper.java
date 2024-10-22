@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import com.example.mytabeltimerforjava.ui.home.Course;
 
@@ -61,6 +62,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     // 查询所有课程
+    // 查询所有课程
     public List<Course> getAllCourses() {
         List<Course> courseList = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
@@ -68,15 +70,28 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // 查询课程表
         Cursor cursor = db.query(TABLE_COURSES, null, null, null, null, null, null);
 
+        // 获取列的索引，并检查是否为 -1
+        int idIndex = cursor.getColumnIndex(COLUMN_ID);
+        int nameIndex = cursor.getColumnIndex(COLUMN_NAME);
+        int timeIndex = cursor.getColumnIndex(COLUMN_TIME);
+        int roomIndex = cursor.getColumnIndex(COLUMN_ROOM);
+
         // 遍历游标获取数据
         while (cursor.moveToNext()) {
-            int id = cursor.getInt(cursor.getColumnIndex(COLUMN_ID));
-            String name = cursor.getString(cursor.getColumnIndex(COLUMN_NAME));
-            String time = cursor.getString(cursor.getColumnIndex(COLUMN_TIME));
-            String room = cursor.getString(cursor.getColumnIndex(COLUMN_ROOM));
-            Course course = new Course(name, time, room, 0); // 颜色设置为 0，可以根据需要修改
-            course.setId(id); // 设置课程 ID
-            courseList.add(course);
+            // 只有当所有列索引都有效时，才读取数据
+            if (idIndex != -1 && nameIndex != -1 && timeIndex != -1 && roomIndex != -1) {
+                int id = cursor.getInt(idIndex);
+                String name = cursor.getString(nameIndex);
+                String time = cursor.getString(timeIndex);
+                String room = cursor.getString(roomIndex);
+
+                Course course = new Course(name, time, room, 0); // 颜色设置为 0，可以根据需要修改
+                course.setId(id); // 设置课程 ID
+                courseList.add(course);
+            } else {
+                // 处理列名未找到的情况（记录日志或抛出异常）
+                Log.e("DatabaseError", "One or more columns not found in the cursor.");
+            }
         }
         cursor.close();
         return courseList;

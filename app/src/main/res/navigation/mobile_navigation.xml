@@ -12,14 +12,14 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.mytabeltimerforjava.ui.dashboard.DashboardFragment"
+        android:id="@+id/navigation_aboutInfo"
+        android:name="com.example.mytabeltimerforjava.ui.aboutinfo.AboutInfoFragment"
         android:label="@string/title_关于"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_about_infos" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.mytabeltimerforjava.ui.notifications.NotificationsFragment"
+        android:id="@+id/navigation_moreFunc"
+        android:name="com.example.mytabeltimerforjava.ui.morefunc.MoreFuncFragment"
         android:label="@string/title_更多功能"
         tools:layout="@layout/fragment_notifications" />
 </navigation>

@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView navView = binding.navView; // 使用绑定对象
 
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
+                R.id.navigation_home, R.id.navigation_aboutInfo, R.id.navigation_moreFunc)
                 .build();
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
