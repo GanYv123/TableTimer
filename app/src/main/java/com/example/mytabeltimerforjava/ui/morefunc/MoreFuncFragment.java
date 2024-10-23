@@ -26,7 +26,7 @@ public class MoreFuncFragment extends Fragment {
 
         final TextView textView = binding.textNotifications;
         notificationsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-        textView.setText("界面待测试！");
+        textView.setText("11111111");
         return root;
     }
 

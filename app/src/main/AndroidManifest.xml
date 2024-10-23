@@ -15,6 +15,9 @@
         android:theme="@style/Theme.MaterialComponents.Light"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <meta-data
+            android:name="author"
+            android:value="赵旭阳" />
 
         <!-- 添加 SplashActivity -->
         <activity

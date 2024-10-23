@@ -24,6 +24,7 @@ public class SplashActivity extends AppCompatActivity {
     private CountDownTimer countDownTimer;
     private static final long COUNTDOWN_TIME = 5000; // 5秒倒计时
     private static final long INTERVAL = 1000; // 每秒更新一次
+    private boolean isSkipped = false; // 标志位，防止重复跳转
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +46,10 @@ public class SplashActivity extends AppCompatActivity {
         skipButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                skipToMainActivity();
+                if (!isSkipped) { // 如果还未跳过
+                    skipToMainActivity();
+                    Toast.makeText(v.getContext(), "跳过成功!", LENGTH_SHORT).show();
+                }
             }
         });
     }
@@ -62,18 +66,19 @@ public class SplashActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                skipToMainActivity();
+                if (!isSkipped) { // 如果还未跳过
+                    skipToMainActivity();
+                }
             }
         }.start();
     }
 
     private void skipToMainActivity() {
+        isSkipped = true; // 标记为已经跳过
         // 跳转到主页
         Intent intent = new Intent(SplashActivity.this, MainActivity.class);
         startActivity(intent);
         finish(); // 结束当前 Activity
-        // 在你的 Activity 或 Fragment 中
-        Toast.makeText(this, "跳过成功!", LENGTH_SHORT).show();
     }
 
     @Override
