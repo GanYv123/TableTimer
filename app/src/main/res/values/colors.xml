@@ -1,19 +1,28 @@
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- 主要颜色 -->
+    <color name="blue_500">#2196F3</color> <!-- 清新蓝色 -->
+    <color name="blue_700">#1976D2</color> <!-- 深蓝色 -->
+    <color name="gray_500">#9E9E9E</color> <!-- 现代灰色 -->
+    <color name="gray_700">#616161</color> <!-- 深灰色 -->
+    <color name="purple_500">#FF6200EE</color> <!-- 中紫色 -->
+    <color name="purple_700">#FF3700B3</color> <!-- 深紫色 -->
 
+    <!-- 基本颜色 -->
+    <color name="teal_200">#FF03DAC5</color> <!-- 浅青色 -->
+    <color name="black">#FF000000</color> <!-- 黑色 -->
+    <color name="white">#FFFFFFFF</color> <!-- 白色 -->
+
+    <!-- 半透明颜色 -->
     <color name="semi_transparent_color">#80FF5722</color> <!-- 半透明橙色 -->
-    <color name="colorPrimary">#FF9800</color> <!-- 主课程颜色 -->
-    <color name="colorPrimaryDark">#F57C00</color> <!-- 深色课程颜色 -->
+
+    <!-- 主课程颜色 -->
+    <color name="colorPrimary">#00BCD4</color> <!-- 主课程颜色 -->
+    <color name="colorPrimaryDark">#00BCD4</color> <!-- 深色课程颜色 -->
     <color name="colorAccent">#FF4081</color> <!-- 时间颜色 -->
 
     <!-- 添加的颜色 -->
-    <color name="app_purple_700">#FF3700B3</color> <!-- 紫色 -->
+    <color name="app_purple_700">#FF3700B3</color> <!-- 深紫色 -->
     <color name="app_teal_200">#FF03DAC5</color> <!-- 青色 -->
     <color name="app_white">#FFFFFFFF</color> <!-- 白色 -->
+    <color name="teal_700">#FF018786</color> <!-- 深青色 -->
 </resources>

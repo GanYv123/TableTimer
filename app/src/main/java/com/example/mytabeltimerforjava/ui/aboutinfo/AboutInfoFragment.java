@@ -28,9 +28,9 @@ public class AboutInfoFragment extends Fragment {
         View root = binding.getRoot();
 
         // 获取 WebView 的引用
-        WebView webView = binding.webView; // 确保你的布局中 WebView 的 id 是 webView
+        WebView webView = binding.webView;
         webView.setWebViewClient(new WebViewClient()); // 设置 WebViewClient 以在 WebView 内部加载网页
-        webView.getSettings().setJavaScriptEnabled(true); // 启用 JavaScript
+        webView.getSettings().setJavaScriptEnabled(true); // 启用 JS
 
         // 启用缓存
         webView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);

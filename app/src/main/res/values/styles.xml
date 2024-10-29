@@ -1,4 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- 应用主题 -->
+    <!-- 清新蓝色主题 -->
+    <style name="AppTheme.Blue" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/blue_500</item>
+        <item name="colorPrimaryDark">@color/blue_700</item>
+        <item name="colorAccent">@color/teal_200</item>
+        <item name="android:statusBarColor">@android:color/transparent</item> <!-- 使状态栏透明 -->
+        <item name="android:windowTranslucentStatus">true</item> <!-- 设置窗口透明状态栏 -->
+    </style>
+
+    <!-- 现代灰色主题 -->
+    <style name="AppTheme.Gray" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/gray_500</item>
+        <item name="colorPrimaryDark">@color/gray_700</item>
+        <item name="colorAccent">@color/teal_200</item>
+        <item name="android:statusBarColor">@android:color/transparent</item> <!-- 使状态栏透明 -->
+        <item name="android:windowTranslucentStatus">true</item> <!-- 设置窗口透明状态栏 -->
+        <item name="colorControlActivated">@color/colorAccent</item> <!-- 选中状态颜色 -->
+        <item name="colorControlNormal">@color/semi_transparent_color</item> <!-- 未选中状态颜色 -->
+    </style>
+
+    <!-- 时尚紫色主题 -->
+    <style name="AppTheme.Purple" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryDark">@color/purple_700</item>
+        <item name="colorAccent">@color/teal_200</item>
+        <item name="android:statusBarColor">@android:color/transparent</item> <!-- 使状态栏透明 -->
+        <item name="android:windowTranslucentStatus">true</item> <!-- 设置窗口透明状态栏 -->
+        <item name="colorControlActivated">@android:color/holo_red_dark</item> <!-- 选中状态颜色 -->
+        <item name="colorControlNormal">@android:color/black</item> <!-- 未选中状态颜色 -->
+    </style>
 </resources>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="personnel_list">赵旭阳\n王兴栋\n徐永泽\n路承儒\n田玉峰\n郭振磊\n宋岳松\n刘梅\n\t —制作人员名单</string>
+    <string name="personnel_list">赵旭阳\n田玉峰\n王兴栋\n徐永泽\n路承儒\n郭振磊\n宋岳松\n刘梅\n\t —制作人员名单</string>
     <string name="app_name">MyTableTimerForJava</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>

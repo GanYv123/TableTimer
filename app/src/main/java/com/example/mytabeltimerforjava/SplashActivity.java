@@ -36,7 +36,7 @@ public class SplashActivity extends AppCompatActivity {
 
         // 使用 Glide 加载 GIF
         Glide.with(this)
-                .load(R.drawable.splash_animation) // 替换为你的 GIF 资源
+                .load(R.drawable.splash_animation) // 替换 GIF 资源
                 .into(gifImageView);
 
         // 启动倒计时

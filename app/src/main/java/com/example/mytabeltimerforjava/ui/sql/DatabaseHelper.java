@@ -62,7 +62,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     // 查询所有课程
-    // 查询所有课程
     public List<Course> getAllCourses() {
         List<Course> courseList = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
