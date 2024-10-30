@@ -12,6 +12,8 @@ import android.widget.NumberPicker;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.example.mytabeltimerforjava.ui.chooseStyle.ChooseStyleViewModel;
+
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -72,7 +74,10 @@ public class HomeFragment extends Fragment {
             public void onItemDeleteClick(Course course) {
                 showDeleteConfirmationDialog(course);
             }
-        });
+        }, new ViewModelProvider(this).get(ChooseStyleViewModel.class)); // 传入 ViewModel
+
+
+
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(courseAdapter);
 

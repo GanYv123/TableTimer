@@ -20,6 +20,7 @@ public class ChooseStyle extends Fragment {
 
     private ChooseStyleViewModel chooseStyleViewModel;
     private static final String TAG = "ChooseStyle"; // 日志标签
+    public static String currentTheme;
 
     public ChooseStyle() {
         // Required empty public constructor
@@ -32,7 +33,7 @@ public class ChooseStyle extends Fragment {
         Log.d(TAG, "Fragment created");
 
         // 获取保存的主题并记录日志
-        String currentTheme = chooseStyleViewModel.getSelectedTheme();
+        currentTheme = chooseStyleViewModel.getSelectedTheme();
         Log.d(TAG, "当前选择的主题: " + currentTheme); // 输出当前主题
     }
 
