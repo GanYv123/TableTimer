@@ -18,8 +18,16 @@
         tools:layout="@layout/fragment_about_infos" />
 
     <fragment
+        android:id="@+id/navigation_choose_style"
+        android:name="com.example.mytabeltimerforjava.ui.chooseStyle.ChooseStyle"
+        android:label="@string/主题"
+        tools:layout="@layout/fragment_choose_style" />
+
+    <fragment
         android:id="@+id/navigation_moreFunc"
         android:name="com.example.mytabeltimerforjava.ui.morefunc.MoreFuncFragment"
         android:label="@string/title_更多功能"
         tools:layout="@layout/fragment_more_func" />
+
+
 </navigation>

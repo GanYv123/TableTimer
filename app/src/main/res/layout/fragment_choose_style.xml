@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/themeButton1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue_500"
+        android:layout_marginTop="50dp"
+        android:padding="16dp"
+        android:text="选择主题1" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="这是清新蓝色主题的介绍"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/themeButton2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/gray_700"
+        android:padding="16dp"
+        android:text="选择主题2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="这是现代灰色主题的介绍"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/themeButton3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/purple_500"
+        android:padding="16dp"
+        android:text="选择主题3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="这是时尚紫色主题的介绍"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/themeButton4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF9966"
+        android:padding="16dp"
+        android:text="选择冰激凌主题" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="这是冰激凌主题的介绍"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/themeButton5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#670AAD"
+        android:padding="16dp"
+        android:text="选择EVA初号机主题" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="这是EVA初号机主题的介绍"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>

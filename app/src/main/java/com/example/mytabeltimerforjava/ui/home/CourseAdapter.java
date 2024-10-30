@@ -13,12 +13,9 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder
     private List<Course> courseList;
     private OnItemLongClickListener longClickListener;
     private int[] rainbowColors = {
-            0x80FF5733, // 半透明红色
-            0x80FFC300, // 半透明黄色
-            0x8000FF00, // 半透明绿色
-            0x8000FFFF, // 半透明青色
-            0xFF5733FF, // 半透明紫色
-            0x80FF33FF  // 半透明粉色
+            0x886E86D6,
+            0x8838E05D,
+            0x88FFD700
     };
 
     public interface OnItemLongClickListener {

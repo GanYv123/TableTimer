@@ -1,9 +1,6 @@
 package com.example.mytabeltimerforjava.ui.home;
-
 import android.app.TimePickerDialog;
-import android.content.DialogInterface;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

@@ -10,8 +10,8 @@
 
     <!-- 现代灰色主题 -->
     <style name="AppTheme.Gray" parent="Theme.MaterialComponents.NoActionBar">
-        <item name="colorPrimary">@color/gray_500</item>
-        <item name="colorPrimaryDark">@color/gray_700</item>
+        <item name="colorPrimary">@color/gray_700</item>
+        <item name="colorPrimaryDark">#4E4E4E</item>
         <item name="colorAccent">@color/teal_200</item>
         <item name="android:statusBarColor">@android:color/transparent</item> <!-- 使状态栏透明 -->
         <item name="android:windowTranslucentStatus">true</item> <!-- 设置窗口透明状态栏 -->
@@ -29,4 +29,28 @@
         <item name="colorControlActivated">@android:color/holo_red_dark</item> <!-- 选中状态颜色 -->
         <item name="colorControlNormal">@android:color/black</item> <!-- 未选中状态颜色 -->
     </style>
+
+    <!-- 冰激凌 -->
+    <style name="AppTheme.cream" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#FF9966</item>
+        <item name="colorPrimaryDark">#FF9800</item>
+        <item name="colorAccent">#FF6666</item>
+        <item name="android:statusBarColor">@android:color/transparent</item> <!-- 使状态栏透明 -->
+        <item name="android:windowTranslucentStatus">true</item> <!-- 设置窗口透明状态栏 -->
+        <item name="colorControlActivated">@color/black</item> <!-- 选中状态颜色 -->
+        <item name="colorControlNormal">#4869D6</item> <!-- 未选中状态颜色 -->
+    </style>
+
+    <!-- EVA 初号机主题 -->
+    <style name="AppTheme.EVA01" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#670AAD</item> <!-- 深紫色主体 -->
+        <item name="colorPrimaryDark">#6D03B6</item> <!-- 更深的紫色 -->
+        <item name="colorAccent">#00FF00</item> <!-- 亮绿色 -->
+        <item name="android:statusBarColor">@android:color/transparent</item> <!-- 透明状态栏 -->
+        <item name="android:windowTranslucentStatus">true</item> <!-- 设置窗口透明状态栏 -->
+        <item name="colorControlActivated">#FFD700</item> <!-- 选中状态颜色，金黄色 -->
+        <item name="colorControlNormal">#8BC34A</item> <!-- 未选中状态颜色，与主体色一致 -->
+    </style>
+
+
 </resources>

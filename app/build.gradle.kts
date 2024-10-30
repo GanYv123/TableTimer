@@ -42,6 +42,7 @@ dependencies {
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
     implementation("com.github.bumptech.glide:glide:4.12.0")
+    implementation(libs.lifecycle.viewmodel.android)
     annotationProcessor("com.github.bumptech.glide:compiler:4.12.0") // Java 项目使用 annotationProcessor
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

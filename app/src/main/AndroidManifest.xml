@@ -12,7 +12,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.Purple"
+        android:theme="@style/AppTheme.EVA01"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <meta-data

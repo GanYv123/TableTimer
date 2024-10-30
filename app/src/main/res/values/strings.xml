@@ -22,4 +22,7 @@
     <string name="text_3">3</string>
     <string name="text_4">4</string>
     <string name="text_路承儒">路承儒16</string>
+    <string name="主题">主题</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
