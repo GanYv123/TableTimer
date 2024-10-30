@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- 清新蓝色主题 -->
     <style name="AppTheme.Blue" parent="Theme.MaterialComponents.Light.NoActionBar">
@@ -51,6 +52,4 @@
         <item name="colorControlActivated">#FFD700</item> <!-- 选中状态颜色，金黄色 -->
         <item name="colorControlNormal">#8BC34A</item> <!-- 未选中状态颜色，与主体色一致 -->
     </style>
-
-
 </resources>
