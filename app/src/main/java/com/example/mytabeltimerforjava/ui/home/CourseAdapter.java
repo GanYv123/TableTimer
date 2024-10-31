@@ -64,7 +64,7 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder
                         0x88808080  // 暗灰色
                 };
                 break;
-            case "AppTheme.Purple":
+            case "AppTheme.Pink":
                 colors = new int[] {
                         0x88E6E6FA, // 薰衣草紫
                         0x88DDA0DD, // 浅紫色

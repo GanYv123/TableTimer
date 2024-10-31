@@ -2,16 +2,16 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="#952BDFF6" /> <!-- 背景颜色 -->
+            <solid android:color="#EAE7E5" /> <!-- 背景颜色，可以根据需要调整 -->
             <corners android:radius="8dp"/> <!-- 圆角 -->
             <stroke
-                android:width="5dp"
+                android:width="2dp"
                 android:color="#000000" /> <!-- 黑色描边 -->
         </shape>
     </item>
     <item android:left="1dp" android:right="1dp" android:top="1dp" android:bottom="1dp">
         <shape android:shape="rectangle">
-            <solid android:color="#5A2BDFF6" /> <!-- 透明度稍低的颜色，用于果冻感 -->
+            <solid android:color="#5AFFFFFF" /> <!-- 透明度稍低的颜色，用于果冻感 -->
             <corners android:radius="8dp"/> <!-- 圆角 -->
         </shape>
     </item>

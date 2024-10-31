@@ -11,27 +11,27 @@
 
     <!-- 伊蕾亚灰色主题 魔女の旅々-->
     <style name="AppTheme.Gray" parent="Theme.MaterialComponents.NoActionBar">
-        <item name="colorPrimary">@color/gray_700</item>
+        <item name="colorPrimary">#CCCCCC</item>
         <item name="colorPrimaryDark">#4E4E4E</item>
-        <item name="colorAccent">@color/teal_200</item>
+        <item name="colorAccent">#0099CC</item>
         <item name="android:statusBarColor">@android:color/transparent</item> <!-- 使状态栏透明 -->
         <item name="android:windowTranslucentStatus">true</item> <!-- 设置窗口透明状态栏 -->
         <item name="colorControlActivated">@color/colorAccent</item> <!-- 选中状态颜色 -->
-        <item name="colorControlNormal">@color/semi_transparent_color</item> <!-- 未选中状态颜色 -->
+        <item name="colorControlNormal">#009999</item> <!-- 未选中状态颜色 -->
     </style>
 
-    <!-- 时尚紫色主题 -->
-    <style name="AppTheme.Purple" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryDark">@color/purple_700</item>
-        <item name="colorAccent">@color/teal_200</item>
+    <!-- 粉色 -->
+    <style name="AppTheme.Pink" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#FFCCCC</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="colorAccent">@color/app_white</item>
         <item name="android:statusBarColor">@android:color/transparent</item> <!-- 使状态栏透明 -->
         <item name="android:windowTranslucentStatus">true</item> <!-- 设置窗口透明状态栏 -->
-        <item name="colorControlActivated">@android:color/holo_red_dark</item> <!-- 选中状态颜色 -->
-        <item name="colorControlNormal">@android:color/black</item> <!-- 未选中状态颜色 -->
+        <item name="colorControlActivated">#000000</item> <!-- 选中状态颜色 -->
+        <item name="colorControlNormal">#ED3871</item> <!-- 未选中状态颜色 -->
     </style>
 
-    <!-- 冰激凌 -->
+    <!-- 奶油冰激凌 -->
     <style name="AppTheme.cream" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">#FF9966</item>
         <item name="colorPrimaryDark">#FF9800</item>

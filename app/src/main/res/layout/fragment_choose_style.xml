@@ -14,7 +14,7 @@
         android:backgroundTint="@color/blue_500"
         android:layout_marginTop="50dp"
         android:padding="16dp"
-        android:text="选择主题1"
+        android:text="这是蓝色主题"
         app:cornerRadius="16dp"
         app:strokeColor="@color/black"
         app:strokeWidth="2dp"/>
@@ -61,7 +61,7 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="这是时尚紫色主题的介绍"
+        android:text="这是时尚粉色主题的介绍"
         android:layout_marginTop="8dp"/>
 
     <com.google.android.material.button.MaterialButton
@@ -70,7 +70,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#FF9966"
         android:padding="16dp"
-        android:text="选择冰激凌主题"
+        android:text="选择奶油冰激凌主题"
         app:cornerRadius="16dp"
         app:strokeColor="@color/black"
         app:strokeWidth="2dp"/>

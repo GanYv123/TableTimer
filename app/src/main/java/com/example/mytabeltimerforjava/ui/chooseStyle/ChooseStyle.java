@@ -61,8 +61,8 @@ public class ChooseStyle extends Fragment {
         Button themeButton3 = view.findViewById(R.id.themeButton3);
         themeButton3.setOnClickListener(v -> {
             Log.d(TAG, "Button 3 clicked: 时尚紫色主题");
-            chooseStyleViewModel.selectTheme("AppTheme.Purple"); // 调用 ViewModel 方法
-            saveThemePreferenceAndRestart("AppTheme.Purple", "选择了时尚紫色主题");
+            chooseStyleViewModel.selectTheme("AppTheme.Pink"); // 调用 ViewModel 方法
+            saveThemePreferenceAndRestart("AppTheme.Pink", "选择了时尚紫色主题");
         });
 
         Button themeButton4 = view.findViewById(R.id.themeButton4);

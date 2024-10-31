@@ -38,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
             case "AppTheme.Gray":
                 setTheme(R.style.AppTheme_Gray);
                 break;
-            case "AppTheme.Purple":
-                setTheme(R.style.AppTheme_Purple);
+            case "AppTheme.Pink":
+                setTheme(R.style.AppTheme_Pink);
                 break;
             case "AppTheme.cream":
                 setTheme(R.style.AppTheme_cream);
@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
             case "AppTheme.Gray":
                 backgroundResId = R.drawable.background_1;
                 break;
-            case "AppTheme.Purple":
+            case "AppTheme.Pink":
                 backgroundResId = R.drawable.background_2;
                 break;
             case "AppTheme.cream":
