@@ -1,9 +1,13 @@
 package com.example.mytabeltimerforjava;
 
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.TypedValue;
+import android.view.Display;
 import android.view.Window;
 import android.view.WindowManager;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +16,9 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.Target;
 import com.example.mytabeltimerforjava.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -22,8 +29,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.d(TAG, "onCreate called");
-
         // 加载用户保存的主题
         String themeName = loadThemePreference();
         Log.d(TAG, "Loaded theme preference: " + themeName); // 日志输出加载的主题
@@ -46,8 +51,16 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG, "Default theme set to: AppTheme.Blue");
                 break;
         }
+        super.onCreate(savedInstanceState); // 只调用一次
+        // 初始化 ViewBinding
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        Log.d(TAG, "onCreate called");
 
-        super.onCreate(savedInstanceState);
+        // 加载用户保存的主题
+        Log.d(TAG, "Loaded theme preference: " + themeName); // 日志输出加载的主题
+
+        setBackgroundImage(themeName);
 
         // 设置窗口属性以实现透明状态栏
         Window window = getWindow();
@@ -60,10 +73,6 @@ public class MainActivity extends AppCompatActivity {
         getTheme().resolveAttribute(android.R.attr.statusBarColor, typedValue, true);
         window.setStatusBarColor(typedValue.data); // 使用 statusBarColor 作为状态栏颜色
         Log.d(TAG, "Status bar color set to: " + typedValue.data); // 日志输出状态栏颜色
-
-        // 初始化 ViewBinding
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
 
         // 设置 Toolbar 为 ActionBar
         Toolbar toolbar = binding.toolbar;
@@ -83,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navView, navController);
         Log.d(TAG, "Navigation UI setup complete");
     }
-
     // 加载主题偏好设置
     private String loadThemePreference() {
         SharedPreferences prefs = getSharedPreferences("theme_prefs", MODE_PRIVATE);
@@ -103,4 +111,44 @@ public class MainActivity extends AppCompatActivity {
         recreate(); // 重新创建活动以应用新的主题
         Log.d(TAG, "Activity recreated to apply new theme");
     }
+    private void setBackgroundImage(String themeName) {
+        int[] screenResolution = getScreenResolution();
+        int width = screenResolution[0];
+        int height = screenResolution[1];
+
+        int backgroundResId;
+        switch (themeName) {
+            case "AppTheme.Gray":
+                backgroundResId = R.drawable.background_1;
+                break;
+            case "AppTheme.Purple":
+                backgroundResId = R.drawable.background_2;
+                break;
+            case "AppTheme.cream":
+                backgroundResId = R.drawable.background_3;
+                break;
+            case "AppTheme.EVA01":
+                backgroundResId = R.drawable.background_4;
+                break;
+            default:
+                backgroundResId = R.drawable.background_5;
+                break;
+        }
+
+        // 使用 Glide 加载背景图
+        Glide.with(this)
+                .load(backgroundResId)
+                .override(width, height) // 使用当前设备的分辨率
+                .into(binding.backgroundImage);
+    }
+    // 获取屏幕分辨率
+    private int[] getScreenResolution() {
+        WindowManager wm = (WindowManager) getSystemService(WINDOW_SERVICE);
+        DisplayMetrics metrics = new DisplayMetrics();
+        Display display = wm.getDefaultDisplay();
+        display.getMetrics(metrics);
+
+        return new int[]{metrics.widthPixels, metrics.heightPixels};
+    }
 }
+
