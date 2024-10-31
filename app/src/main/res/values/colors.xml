@@ -25,4 +25,5 @@
     <color name="app_teal_200">#FF03DAC5</color> <!-- 青色 -->
     <color name="app_white">#FFFFFFFF</color> <!-- 白色 -->
     <color name="teal_700">#FF018786</color> <!-- 深青色 -->
+    <color name="pink_theme">#FFCCCC</color> <!-- FFCCCC -->
 </resources>

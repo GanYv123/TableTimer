@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding; // 使用 ViewBinding 进行布局绑定
     private static final String TAG = "MainActivity"; // 日志标签
 
+    @SuppressWarnings("deprecation")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // 加载用户保存的主题

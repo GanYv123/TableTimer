@@ -15,8 +15,9 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
-        release {
+        getByName("release") {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -24,10 +25,16 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
+    tasks.withType<JavaCompile> {
+        options.compilerArgs.add("-Xlint:-deprecation") // 忽略过时 API 警告
+    }
+
     buildFeatures {
         viewBinding = true
     }

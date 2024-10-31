@@ -7,14 +7,17 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/themeButton1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/blue_500"
         android:layout_marginTop="50dp"
         android:padding="16dp"
-        android:text="选择主题1" />
+        android:text="选择主题1"
+        app:cornerRadius="16dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="2dp"/>
 
     <TextView
         android:id="@+id/textView1"
@@ -23,28 +26,36 @@
         android:text="这是清新蓝色主题的介绍"
         android:layout_marginTop="8dp"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/themeButton2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/gray_700"
         android:padding="16dp"
-        android:text="选择主题2" />
+        android:text="魔女の旅々 伊雷娜 灰色主题"
+        app:cornerRadius="16dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="2dp"/>
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="这是现代灰色主题的介绍"
+        android:text="魔女の旅々 灰色主题的介绍"
         android:layout_marginTop="8dp"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/themeButton3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/purple_500"
+        android:backgroundTint="@color/pink_theme"
+        android:textColor="#996699"
+        android:textStyle="bold"
         android:padding="16dp"
-        android:text="选择主题3" />
+        android:text="緒山まひろ 粉色主题"
+        app:cornerRadius="16dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="2dp"/>
 
     <TextView
         android:id="@+id/textView3"
@@ -53,13 +64,16 @@
         android:text="这是时尚紫色主题的介绍"
         android:layout_marginTop="8dp"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/themeButton4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#FF9966"
         android:padding="16dp"
-        android:text="选择冰激凌主题" />
+        android:text="选择冰激凌主题"
+        app:cornerRadius="16dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="2dp"/>
 
     <TextView
         android:id="@+id/textView4"
@@ -68,13 +82,16 @@
         android:text="这是冰激凌主题的介绍"
         android:layout_marginTop="8dp"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/themeButton5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#670AAD"
         android:padding="16dp"
-        android:text="选择EVA初号机主题" />
+        android:text="选择EVA初号机主题"
+        app:cornerRadius="16dp"
+        app:strokeColor="@color/black"
+        app:strokeWidth="2dp"/>
 
     <TextView
         android:id="@+id/textView5"

@@ -9,7 +9,7 @@
         <item name="android:windowTranslucentStatus">true</item> <!-- 设置窗口透明状态栏 -->
     </style>
 
-    <!-- 现代灰色主题 -->
+    <!-- 伊蕾亚灰色主题 魔女の旅々-->
     <style name="AppTheme.Gray" parent="Theme.MaterialComponents.NoActionBar">
         <item name="colorPrimary">@color/gray_700</item>
         <item name="colorPrimaryDark">#4E4E4E</item>
