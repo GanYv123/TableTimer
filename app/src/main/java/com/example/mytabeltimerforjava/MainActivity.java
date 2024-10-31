@@ -126,10 +126,10 @@ public class MainActivity extends AppCompatActivity {
                 backgroundResId = R.drawable.background_2;
                 break;
             case "AppTheme.cream":
-                backgroundResId = R.drawable.background_3;
+                backgroundResId = R.drawable.background_4;
                 break;
             case "AppTheme.EVA01":
-                backgroundResId = R.drawable.background_4;
+                backgroundResId = R.drawable.background_7;
                 break;
             default:
                 backgroundResId = R.drawable.background_5;
