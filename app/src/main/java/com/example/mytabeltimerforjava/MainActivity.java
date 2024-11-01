@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
                 backgroundResId = R.drawable.background_7;
                 break;
             default:
-                backgroundResId = R.drawable.background_5;
+                backgroundResId = R.drawable.background_home_image;
                 break;
         }
 

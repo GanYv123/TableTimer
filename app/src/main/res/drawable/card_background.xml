@@ -1,9 +1,9 @@
-<!-- button_background.xml -->
+<!-- card_background.xml -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- 外层阴影 -->
     <item>
         <shape android:shape="rectangle">
-            <corners android:radius="16dp"/> <!-- 圆角 -->
+            <corners android:radius="16dp"/>
             <solid android:color="#22000000"/> <!-- 浅黑色阴影 -->
         </shape>
     </item>

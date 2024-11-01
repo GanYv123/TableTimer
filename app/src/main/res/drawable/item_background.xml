@@ -1,0 +1,21 @@
+<!-- item_background.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 阴影效果层 -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="16dp"/> <!-- 圆角 -->
+            <solid android:color="#22000000"/> <!-- 更浅的阴影颜色 -->
+        </shape>
+    </item>
+    <!-- 圆角和较扎实的描边效果 -->
+    <item android:left="3dp" android:right="3dp" android:top="3dp" android:bottom="3dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="16dp"/>
+            <stroke android:width="3dp" android:color="#FF444444"/> <!-- 较扎实的深灰色描边 -->
+            <gradient
+                android:startColor="#B0FFFFFF"
+                android:endColor="#B0E0FFFF"
+                android:angle="90"/> <!-- 较饱和的渐变填充颜色 -->
+        </shape>
+    </item>
+</layer-list>

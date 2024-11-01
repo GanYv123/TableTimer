@@ -55,28 +55,28 @@ public class ChooseStyle extends Fragment {
         themeButton2.setOnClickListener(v -> {
             Log.d(TAG, "Button 2 clicked: 现代灰色主题");
             chooseStyleViewModel.selectTheme("AppTheme.Gray"); // 调用 ViewModel 方法
-            saveThemePreferenceAndRestart("AppTheme.Gray", "选择了现代灰色主题");
+            saveThemePreferenceAndRestart("AppTheme.Gray", "我只是一位旅行者，只是一位魔女");
         });
 
         Button themeButton3 = view.findViewById(R.id.themeButton3);
         themeButton3.setOnClickListener(v -> {
             Log.d(TAG, "Button 3 clicked: 粉色主题");
             chooseStyleViewModel.selectTheme("AppTheme.Pink"); // 调用 ViewModel 方法
-            saveThemePreferenceAndRestart("AppTheme.Pink", "选择了时尚紫色主题");
+            saveThemePreferenceAndRestart("AppTheme.Pink", "这里是真寻酱！");
         });
 
         Button themeButton4 = view.findViewById(R.id.themeButton4);
         themeButton4.setOnClickListener(v -> {
             Log.d(TAG, "Button 4 clicked: 冰激凌主题");
             chooseStyleViewModel.selectTheme("AppTheme.cream"); // 调用 ViewModel 方法
-            saveThemePreferenceAndRestart("AppTheme.cream", "选择了冰激凌主题");
+            saveThemePreferenceAndRestart("AppTheme.cream", "来一杯橙汁吧！");
         });
 
         Button themeButton5 = view.findViewById(R.id.themeButton5);
         themeButton5.setOnClickListener(v -> {
             Log.d(TAG, "Button 5 clicked: EVA初号机主题");
             chooseStyleViewModel.selectTheme("AppTheme.EVA01"); // 调用 ViewModel 方法
-            saveThemePreferenceAndRestart("AppTheme.EVA01", "选择了EVA初号机主题");
+            saveThemePreferenceAndRestart("AppTheme.EVA01", "选择了EVA-初号机");
         });
 
         return view;

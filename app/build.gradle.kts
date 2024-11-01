@@ -10,8 +10,8 @@ android {
         applicationId = "com.example.mytabeltimerforjava"
         minSdk = 24
         targetSdk = 34
-        versionCode = 6
-        versionName = "2.2"
+        versionCode = 8
+        versionName = "2.4"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

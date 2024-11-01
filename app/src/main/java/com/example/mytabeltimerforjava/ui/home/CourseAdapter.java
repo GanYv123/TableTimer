@@ -49,7 +49,9 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder
         holder.textViewName.setText(course.getName());
         holder.textViewTime.setText(course.getTime());
         holder.textViewRoom.setText(course.getRoomName());
-        currentTheme = chooseStyleViewModel.getSelectedTheme(); // 从 ViewModel 获取当前主题
+
+        // 获取当前主题
+        currentTheme = chooseStyleViewModel.getSelectedTheme();
         int[] colors;
 
         // 根据当前主题选择颜色
@@ -59,56 +61,58 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder
                 break;
             case "AppTheme.Gray":
                 colors = new int[] {
-                        0x88D3D3D3, // 亮灰色
-                        0x88A9A9A9, // 中灰色
-                        0x88808080  // 暗灰色
+                        0x88D3D3D3,
+                        0x88A9A9A9,
+                        0x88808080
                 };
                 break;
             case "AppTheme.Pink":
                 colors = new int[] {
-                        0x88E6E6FA, // 薰衣草紫
-                        0x88DDA0DD, // 浅紫色
-                        0x88BA55D3  // 中等紫色
+                        0x88E6E6FA,
+                        0x88DDA0DD,
+                        0x88BA55D3
                 };
                 break;
             case "AppTheme.cream":
                 colors = new int[] {
-                        0x88FFFDD0, // 奶油色
-                        0x88FFFACD, // 柠檬奶油色
-                        0x88FFE4B5  // 蛋糕色
+                        0x88FFFDD0,
+                        0x88FFFACD,
+                        0x88FFE4B5
                 };
                 break;
             case "AppTheme.Blue":
             default:
                 colors = new int[] {
-                        0x8800BFFF, // 深天蓝
-                        0x8801EFFF, // 天蓝色
-                        0x88ADD8E6  // 淡蓝色
+                        0x8800BFFF,
+                        0x8801EFFF,
+                        0x88ADD8E6
                 };
                 break;
         }
 
         // 设置半透明背景颜色
-        int colorIndex = position % colors.length; // 获取颜色索引
-        holder.itemView.setBackgroundColor(colors[colorIndex]); // 设置颜色
+        int colorIndex = position % colors.length;
+        holder.itemView.setBackgroundResource(R.drawable.item_background); // 设置带阴影和描边的背景
+        holder.itemView.getBackground().mutate().setTint(colors[colorIndex]); // 设置颜色
 
-        // 设置不透明文本颜色
+        // 设置文本颜色
         holder.textViewName.setTextColor(0xFF000000); // 黑色
         holder.textViewTime.setTextColor(0xFF000000); // 黑色
         holder.textViewRoom.setTextColor(0xFF000000); // 黑色
 
+        // 长按事件
         holder.itemView.setOnLongClickListener(v -> {
             longClickListener.onItemLongClick(course);
             return true;
         });
 
-        // 添加删除点击事件
+        // 删除点击事件
         holder.itemView.setOnClickListener(v -> longClickListener.onItemDeleteClick(course));
 
-        // 使用 ViewModel 获取当前主题
-        currentTheme = chooseStyleViewModel.getSelectedTheme();
-        Log.w(TAG, "当前加载的主题: " + currentTheme); // 输出当前主题
+        // 输出当前主题
+        Log.w(TAG, "当前加载的主题: " + currentTheme);
     }
+
 
     @Override
     public int getItemCount() {
