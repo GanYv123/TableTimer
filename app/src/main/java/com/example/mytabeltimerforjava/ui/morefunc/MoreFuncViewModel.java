@@ -16,4 +16,10 @@ public class MoreFuncViewModel extends ViewModel {
     public LiveData<String> getText() {
         return mText;
     }
+
+    // 此处添加方法来处理按钮点击事件的逻辑
+    public void onFunctionSelected(String function) {
+        // 在这里处理不同功能的逻辑
+        mText.setValue(function + " 被点击了!");
+    }
 }
